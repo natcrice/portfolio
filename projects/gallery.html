@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Gallery — Natalie Rice</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  <script>try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="stylesheet" href="../css/style.css?v=48" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container container--wide" aria-label="Primary">
+      <a class="nav__brand" href="../index.html#top">Natalie Rice<span class="nav__brand-dot">.</span></a>
+      <div class="nav__right">
+        <a class="nav__back" href="../index.html#research">&#8249;&nbsp;Back to portfolio</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="sheet">
+      <section class="gallery" id="gallery">
+        <p class="section__kicker" id="g-kicker">Gallery</p>
+        <h1 class="section__title" id="g-title">Project</h1>
+        <p class="gallery__sub" id="g-sub"></p>
+        <div class="gallery__files" id="g-files"></div>
+        <div class="gallery__grid" id="g-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container container--wide site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Natalie Rice</p>
+      <p><a href="../index.html#research">Back to projects</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var DATA = {
+        "rc-car": {
+          title: "RC Car Tractor-Pull Redesign",
+          sub: "Machine Elements, Spring 2026. Redesigned an RC car's drivetrain for tractor-pull performance — a 29% gain in average pull capacity.",
+          files: [{ href: "../assets/rc-car-report.pdf", label: "Final report (PDF)" }],
+          images: [
+            { src: "../assets/images/gallery/rc-car/1-teardown.jpg", cap: "Full teardown of the stock car on grid paper, parts labeled for the redesign study." },
+            { src: "../assets/images/gallery/rc-car/2-gear-train.jpg", cap: "Gear train: spur, pinion, and the two transmission gears that set the drive ratio." },
+            { src: "../assets/images/gallery/rc-car/3-rims-gdt.jpg", cap: "Rear rim detail drawing with GD&T." },
+            { src: "../assets/images/gallery/rc-car/4-spur-gear.jpg", cap: "Spur gear detail drawing." },
+            { src: "../assets/images/gallery/rc-car/5-shaft.jpg", cap: "Redesigned drive shaft detail drawing." },
+            { src: "../assets/images/gallery/rc-car/6-hex-hub.jpg", cap: "Wheel hex hub detail drawing." }
+          ]
+        },
+        "dna-pipeline": {
+          title: "DNA Origami to Printable STL Application",
+          sub: "Marras Research Group, UT Austin. A Python tool that converts raw PDB models into simplified, 3D-printable geometry so the lab can prototype its designs.",
+          files: [{ href: "../assets/pdb-to-stl.py", label: "Python source — pdb-to-stl.py" }],
+          images: [
+            { src: "../assets/images/gallery/dna-pipeline/1-lattice-print.jpg", cap: "Physical FDM print of a scaled origami lattice." },
+            { src: "../assets/images/gallery/dna-pipeline/2-bundle-model.jpg", cap: "Space-filling model of a DNA origami bundle, one of roughly 200 processed." },
+            { src: "../assets/images/gallery/dna-pipeline/3-longhorn-model.jpg", cap: "Origami model built to the UT Longhorn silhouette." },
+            { src: "../assets/images/gallery/dna-pipeline/4-sliced-stl.jpg", cap: "Sliced STL ready for printing, with a brim added for bed adhesion." }
+          ]
+        },
+        "vise": {
+          title: "Machined Mechanical Vise",
+          sub: "Machine Tool Operations, Spring 2026. A complete mechanical vise machined from aluminum and brass stock — every surface, hole, thread, and moving part.",
+          files: [],
+          images: [
+            { src: "../assets/images/vise/1-finished.jpg", cap: "Finished vise, hand-engraved." },
+            { src: "../assets/images/vise/2-vise-body.png", cap: "Vise body detail drawing (sheet 01)." },
+            { src: "../assets/images/vise/3-moveable-jaw.png", cap: "Moveable jaw detail drawing (sheet 02)." },
+            { src: "../assets/images/vise/4-jaw-faceplate.png", cap: "Jaw faceplate detail drawing." },
+            { src: "../assets/images/vise/5-threaded-shaft.png", cap: "Threaded shaft detail drawing." },
+            { src: "../assets/images/vise/6-knob.png", cap: "Knob detail drawing." },
+            { src: "../assets/images/vise/7-bushing.png", cap: "Bushing detail drawing." },
+            { src: "../assets/images/vise/8-garter.png", cap: "Garter detail drawing." },
+            { src: "../assets/images/vise/9-under-plate.png", cap: "Under plate detail drawing." }
+          ]
+        },
+        "bioprinting": {
+          title: "Mechanical Characterization of Biomaterials",
+          sub: "BioMATTER Lab, UT Austin. Age-related degeneration in musculoskeletal tissue and bone.",
+          files: [],
+          images: [
+            { src: "../assets/images/gallery/bioprinting/1-results.jpg", cap: "Publication figure: senescence markers and gene expression across timepoints, with a cell-behavior summary and fluorescence micrographs." },
+            { src: "../assets/images/gallery/bioprinting/2-nanoindentation.jpg", cap: "Nanoindentation setup and a micrograph of a cell being probed (3 um indenter, 0.019 N/m stiffness).", max: "26rem" },
+            { src: "../assets/images/gallery/bioprinting/3-cryosectioning.jpg", cap: "Cryosectioning of mouse organs: schematic plus photos of the cryostat and sectioned tissue." },
+            { src: "../assets/images/gallery/bioprinting/4-digestion.jpg", cap: "Bone-cell isolation: nine digestion cycles in collagenase and EDTA.", label: "Digestion of bone cells" }
+          ]
+        },
+        "wind-indicator": {
+          title: "Wind-Powered Speed Indicator",
+          sub: "Mechatronics, Fall 2025. A wind-powered generator and signal-conditioning circuit driving a five-tier LED speed display through an Arduino.",
+          files: [{ href: "../assets/mechatronics-deck.pdf", label: "Design project slide deck (PDF)" }],
+          images: [
+            { src: "../assets/images/gallery/wind-indicator/1-bench.jpg", cap: "Bench setup: 3D-printed turbine driving the circuit, read out on the oscilloscope." },
+            { src: "../assets/images/gallery/wind-indicator/2-circuit-diagram.jpg", cap: "Circuit: full-bridge rectifier and smoothing capacitor feeding an Arduino that drives the LED tiers." },
+            { src: "../assets/images/gallery/wind-indicator/3-elvis-build.jpg", cap: "Breadboard build on the NI ELVIS prototyping board." }
+          ]
+        }
+      };
+
+      var yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+      var m = location.search.match(/[?&]p=([^&]+)/);
+      var key = m ? decodeURIComponent(m[1]) : "";
+      var d = DATA[key];
+
+      if (!d) {
+        document.getElementById("g-title").textContent = "Gallery not found";
+        document.getElementById("g-sub").textContent = "Open a project from the portfolio page to view its images.";
+        return;
+      }
+
+      document.title = d.title + " — Gallery — Natalie Rice";
+      document.getElementById("g-title").textContent = d.title;
+      document.getElementById("g-sub").textContent = d.sub || "";
+
+      var filesEl = document.getElementById("g-files");
+      (d.files || []).forEach(function (f) {
+        var a = document.createElement("a");
+        a.className = "gallery__file";
+        a.href = f.href;
+        a.textContent = f.label + " ↓";
+        filesEl.appendChild(a);
+      });
+
+      var gridEl = document.getElementById("g-grid");
+      d.images.forEach(function (im) {
+        var fig = document.createElement("figure");
+        fig.className = "gallery__item";
+        var img = document.createElement("img");
+        img.src = im.src;
+        img.alt = im.label || im.cap || d.title;
+        img.loading = "lazy";
+        if (im.max) img.style.maxWidth = im.max;
+        fig.appendChild(img);
+        if (im.label) {
+          var cap = document.createElement("figcaption");
+          cap.textContent = im.label;
+          fig.appendChild(cap);
+        }
+        gridEl.appendChild(fig);
+      });
+    })();
+  </script>
+</body>
+</html>

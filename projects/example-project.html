@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RC Car Redesign for Tractor-Pull — Natalie Rice</title>
+  <meta name="description" content="Case study: redesign of a competition RC car drivetrain and structure for drawbar pull, supported by finite element analysis and machine-element calculations. Result: 30% greater load capacity." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../css/style.css?v=10" />
+  <link rel="stylesheet" href="../css/project.css?v=10" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container container--wide" aria-label="Primary">
+      <a class="nav__brand" href="../index.html">Natalie Rice<span class="nav__brand-dot">.</span></a>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a class="nav__resume" href="../assets/resume.pdf">Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="case container">
+    <a class="case__back" href="../index.html#projects">← All projects</a>
+
+    <header class="case__head">
+      <p class="case__eyebrow">Case Study</p>
+      <h1 class="case__title">RC Car Redesign for Tractor-Pull</h1>
+      <p class="case__summary">
+        A competition RC car had been optimized for speed, which limited its
+        performance in drawbar-pull events. I led a redesign of the drivetrain
+        and chassis to increase pulling capacity while maintaining acceptable
+        handling on loose, uneven terrain. The revised vehicle pulled 30% more
+        load than the original.
+      </p>
+      <dl class="case__specs">
+        <div><dt>Role</dt><dd>Redesign lead</dd></div>
+        <div><dt>Timeline</dt><dd>2023–present</dd></div>
+        <div><dt>Team</dt><dd>Class project team</dd></div>
+        <div><dt>Tools</dt><dd>SolidWorks, FEA, mill and lathe, FDM printing</dd></div>
+        <div><dt>Result</dt><dd>30% greater load capacity</dd></div>
+      </dl>
+    </header>
+
+    <figure class="case__hero">
+      <svg viewBox="0 0 1000 480" role="img" aria-label="Hero image placeholder">
+        <rect width="1000" height="480" fill="currentColor" opacity="0.05"/>
+        <g stroke="currentColor" stroke-width="6" fill="none" opacity="0.18">
+          <circle cx="300" cy="330" r="90"/><circle cx="700" cy="330" r="90"/>
+          <path d="M240 250 L760 250 L690 180 L330 180 Z"/>
+        </g>
+      </svg>
+      <figcaption>Placeholder — replace with a photograph of the vehicle, a SolidWorks render, or an exploded view.</figcaption>
+    </figure>
+
+    <section class="case__section">
+      <h2>Problem</h2>
+      <p>
+        Drawbar-pull performance depends on traction and wheel torque, while the
+        agility and varied-terrain events favor low rotating inertia and a light,
+        responsive vehicle. The original design prioritized top speed. Under
+        load, the drive wheels lost traction early, and chassis deflection was
+        large enough to shift the wheelbase and toe angle.
+      </p>
+      <p>
+        The redesign needed to increase usable pulling force without adding
+        enough mass or gear reduction to compromise performance on the agility
+        and varied-terrain courses.
+      </p>
+    </section>
+
+    <section class="case__section">
+      <h2>Approach</h2>
+      <ul>
+        <li><strong>Drivetrain.</strong> Revised the gear ratio from [start ratio] to [final ratio] to increase wheel torque, sized against motor stall torque and a target pull force.</li>
+        <li><strong>Traction.</strong> Shifted weight distribution rearward and revised the drive-wheel tire selection and contact patch to keep the tires below the slip limit at peak pull.</li>
+        <li><strong>Structure.</strong> Performed finite element analysis of the chassis and axle-carrier load path under the pull reaction, adding material only where deflection contributed to wheelbase and toe change. Verified critical members with machine-element calculations for bending, bearing, and shear at the pin joints.</li>
+        <li><strong>Prototyping.</strong> Modeled components in SolidWorks and produced printed prototypes of the gears, motor stand, and fitted parts, then machined the final load-bearing components on the mill and lathe to specified tolerances.</li>
+      </ul>
+    </section>
+
+    <div class="case__grid">
+      <figure>
+        <svg viewBox="0 0 480 360" role="img" aria-label="Detail image placeholder">
+          <rect width="480" height="360" fill="currentColor" opacity="0.05"/>
+          <g stroke="currentColor" stroke-width="3" fill="none" opacity="0.2">
+            <circle cx="240" cy="180" r="110"/><circle cx="240" cy="180" r="60"/>
+          </g>
+        </svg>
+        <figcaption>Gear-train layout, or chassis displacement results from finite element analysis.</figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="0 0 480 360" role="img" aria-label="Detail image placeholder">
+          <rect width="480" height="360" fill="currentColor" opacity="0.05"/>
+          <path d="M60 300 L120 300 L170 140 L230 140 L280 260 L340 260 L390 90 L420 90"
+                fill="none" stroke="currentColor" stroke-width="4" opacity="0.22"/>
+        </svg>
+        <figcaption>Pull-test results: load capacity before and after the redesign.</figcaption>
+      </figure>
+    </div>
+
+    <section class="case__section">
+      <h2>Results</h2>
+      <ul>
+        <li>The revised vehicle pulled 30% more load than the original.</li>
+        <li>Chassis deflection at peak pull was reduced to [value], holding wheelbase and toe angle within [tolerance].</li>
+        <li>Machined drivetrain components held [tolerance] on the shaft fits. Printed prototypes identified [issue] before final machining.</li>
+        <li>Agility-course lap time changed by [value], within the acceptable trade-off.</li>
+      </ul>
+      <!-- TODO before publishing: replace every [bracketed value] above with measured numbers, or delete the line. -->
+    </section>
+
+    <section class="case__section">
+      <h2>What I would do differently</h2>
+      <p>
+        Earlier instrumentation would have improved the process. Adding
+        current-draw logging and a hitch-mounted load cell at the start would
+        have grounded design decisions in measured data rather than qualitative
+        assessment. I would also design the machined components around available
+        stock and tooling from the outset to avoid a second machining cycle.
+      </p>
+    </section>
+
+    <nav class="case__nav">
+      <a href="../index.html#projects">← All projects</a>
+      <a href="example-project.html">Next project →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container container--wide site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Natalie Rice</p>
+      <p><a href="../index.html#top">Back to top ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
